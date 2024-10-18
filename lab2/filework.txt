@@ -1,0 +1,36 @@
+lab2.txt
+{
+kzp lab2 var 7
+}
+lolol.txt
+{
+asfasfa asf fas
+}
+kok.txt
+{
+asd fasgadag
+}
+MykolaZabrotskyi.txt
+{
+2006
+}
+mkkm.txt
+{
+sad asd
+}
+pklads.txt
+{
+mkdmfd mkfd
+}
+Kok.txt
+{
+sadas asd
+}
+olegmongol.txt
+{
+oleg ggg
+}
+Log.txt
+{
+log log log
+}
