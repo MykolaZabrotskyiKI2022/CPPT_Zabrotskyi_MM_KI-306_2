@@ -1,43 +1,237 @@
 package ki306zabrotskyilab2;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
- * Клас Computer представляє комп'ютер з атрибутами бренду, року випуску та ціни.
- * Він також містить методи для розрахунку арифметичних виразів, створення та читання файлів.
+ * Represents a computer with a processor, memory, and display.
+ * Provides functionality to start, display menu, shutdown, and perform various operations.
  */
 public class Computer {
-    private String brand;
-    private int year;
-    private int price;
+    protected Processor processor;
+    protected Memory memory;
+    protected Display display;
 
-    // Ім'я файлу журналу
-    private static final String LOG_FILE_NAME = "activity_log.txt";
-
+    /**
+     * Default constructor initializing with preset processor, memory, and display.
+     */
     public Computer() {
-        this.brand = "Невідомий";
-        this.year = 0;
-        this.price = 0;
-        log("Створено комп'ютер за замовчуванням.");
+        this.processor = new Processor("Intel", 3.5);
+        this.memory = new Memory(16, "DDR4");
+        this.display = new Display("Full HD", 24);
+        logActivity("Computer created with default specifications.");
     }
 
-    public Computer(String brand, int year, int price) {
-        this.brand = brand;
-        this.year = year;
-        this.price = price;
-        log("Створено комп'ютер з брендом: " + brand + ", роком: " + year + ", ціною: " + price);
+    /**
+     * Constructs a computer with specified processor, memory, and display.
+     *
+     * @param processor the processor of the computer
+     * @param memory    the memory of the computer
+     * @param display   the display of the computer
+     */
+    public Computer(Processor processor, Memory memory, Display display) {
+        this.processor = processor;
+        this.memory = memory;
+        this.display = display;
+        logActivity("Computer created with custom specifications.");
     }
 
-    // Метод для запису повідомлень у журнал
-    private void log(String message) {
-        try (PrintWriter logWriter = new PrintWriter(new FileWriter(LOG_FILE_NAME, true))) {
-            logWriter.println(System.currentTimeMillis() + ": " + message);
+    private void logActivity(String message) {
+        try (PrintWriter logWriter = new PrintWriter(new FileWriter("activity_log.txt", true))) {
+            logWriter.println(message);
         } catch (IOException e) {
-            System.out.println("Помилка при запису в журнал: " + e.getMessage());
+            System.err.println("Error writing to log file: " + e.getMessage());
         }
     }
+    
+    /**
+     * Simulates the starting process of the computer.
+     */
+    public void start() {
+        logActivity("Start method called.");
+        System.out.println(" __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|\n\n\n\n\n\n\n\n\n\n\n\n");
+        for (int i = 0; i < 3; i++) {
+            if (i == 0) {
+                System.out.print("\t\t\t\t\tЗавантаження.");
+            }
+            if (i > 0) {
+                System.out.print(".");
+            }
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                logActivity("Error: Thread interrupted during start sequence.");
+            }
+        }
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
 
-    public void calculate(String expression) {
+        }
+        System.out.println("|__________________________________________________________________________________________________|\n\n\n\n\n\n\n\n\n\n\n\n");
+        System.out.print("\t\t\t\tКомп'ютер успішно завантажено.");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
+        logActivity("Computer successfully started.");
+    }
+
+    /**
+     * Displays a menu of available operations on the computer.
+     */
+    public void showMenu() {
+        logActivity("showMenu method called.");
+        System.out.println(" __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
+        System.out.println("\t ___");
+        System.out.println("\t| ⎗ |");
+        System.out.println("\t ---");
+        System.out.println("\t1.Show PC info.exe");
+        System.out.println("\t ___");
+        System.out.println("\t| ⎘ |");
+        System.out.println("\t ---");
+        System.out.println("\t2.Change PC info.exe");
+        System.out.println("\t ___");
+        System.out.println("\t| + |");
+        System.out.println("\t ---");
+        System.out.println("\t3.Calculator.exe");
+        System.out.println("\t ___");
+        System.out.println("\t| ⎙ |");
+        System.out.println("\t ---");
+        System.out.println("\t4.Filework");
+        System.out.println("\t ___");
+        System.out.println("\t| ⊗ |");
+        System.out.println("\t ---");
+        System.out.println("\t5.Shutdown");
+        System.out.println("\n\n\n\n __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
+    }
+
+    /**
+     * Simulates shutting down the computer.
+     */
+    public void shutdown() {
+        logActivity("shutdown method called.");
+        System.out.println(" __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|\n\n\n\n\n\n\n\n\n\n\n\n");
+        for (int i = 0; i < 3; i++) {
+            if (i == 0) {
+                System.out.print("\t\t\t\t\tЗавершення роботи.");
+            }
+            if (i > 0) {
+                System.out.print(".");
+            }
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+
+            }
+        }
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
+        System.out.println(" __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|\n\n\n\n\n\n\n\n\n\n\n\n");
+        System.out.print("\t\t\t\t\tКомп'ютер вимкнено.");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
+        logActivity("Computer successfully shut down.");
+    }
+
+    /**
+     * Displays information about the computer's components.
+     */
+    public void displayInfo(){
+        logActivity("displayInfo method called.");
+        System.out.println(" __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|\n\n\n\n\n\n\n\n\n");
+        System.out.println("\t\t\t\tХарактеристики цього пк.");
+        System.out.println("\tПроцесор: " + processor);
+        System.out.println("\tПам'ять: " + memory);
+        System.out.println("\tДисплей: " + display);
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+
+        }
+        logActivity("Computer specifications displayed.");
+    }
+
+    /**
+     * Changes the computer's components to new ones.
+     *
+     * @param processor the new processor
+     * @param memory    the new memory
+     * @param display   the new display
+     */
+    public void changeInfo(Processor processor, Memory memory, Display display) {
+        logActivity("changeInfo method called.");
+        this.processor = processor;
+        this.memory = memory;
+        this.display = display;
+        logActivity("Computer specifications updated.");
+    } 
+
+    /**
+     * Performs a calculation based on the provided expression.
+     * @param expression the expression to be calculated
+     */
+    public void Calc(String expression) {
+        logActivity("Calc method called with expression: " + expression);
+        Programs calculator = new Programs();
+        calculator.Calc(expression);
+    }
+
+    /**
+     * Displays the file work menu.
+     */
+    public void showFileWorkMenu() {
+        logActivity("showFileWorkMenu method called.");
+        Programs showFWM = new Programs();
+        showFWM.showFileWorkMenu();
+    }
+
+    /**
+     * Creates a file with the specified name and content.
+     * @param nameoffile the name of the file to create
+     * @param contentoffile the content to write in the file
+     */
+    public void fileCreate(String nameoffile, String contentoffile) {
+        logActivity("fileCreate method called with file name: " + nameoffile);
+        Programs fileC = new Programs();
+        fileC.fileCreate(nameoffile, contentoffile);
+    }
+
+    /**
+    * Reads and displays the list of files.
+    */
+    public void fileRead(){
+        logActivity("fileRead method called.");
+        Programs fileR = new Programs();
+        fileR.fileRead();
+    }
+
+    /**
+     * Reads the content of a specified file.
+     * @param nameoffile the name of the file whose content is to be read
+     */
+    public void fileReadContent(String nameoffile) {
+        logActivity("fileReadContent method called with file name: " + nameoffile);
+        Programs fileRC = new Programs();
+        fileRC.fileReadContent(nameoffile);
+    }
+}
+
+class Programs {
+    public Programs() {
+    }
+    public void Calc(String expression) {
         String strnum1 = "";
         String strnum2 = "";
         char op = '\0';
@@ -67,14 +261,27 @@ public class Computer {
                     result = dnum1 / dnum2;
                 } else {
                     System.out.println("Помилка: Ділення на нуль.");
-                    log("Помилка: Ділення на нуль для виразу " + expression);
                     return;
                 }
             }
         }
 
         System.out.println("\t\tРезультат: " + result);
-        log("Обчислено: " + expression + " = " + result);
+    }
+
+    public void showFileWorkMenu() {
+        System.out.println(" __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
+        System.out.println("\t ___");
+        System.out.println("\t| ⎘ |");
+        System.out.println("\t ---");
+        System.out.println("\t1.Create File.exe");
+        System.out.println("\t ___");
+        System.out.println("\t|   |");
+        System.out.println("\t ---");
+        System.out.println("\t2.Created Files(folder)");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
     }
 
     public void fileCreate(String nameoffile, String contentoffile) {
@@ -83,10 +290,8 @@ public class Computer {
             filecreate.println("{");
             filecreate.println(contentoffile);
             filecreate.println("}");
-            log("Створено файл: " + nameoffile + ".txt з вмістом: " + contentoffile);
         } catch (IOException e) {
             System.out.println("Помилка при створенні файлу: " + e.getMessage());
-            log("Помилка при створенні файлу: " + e.getMessage());
         }
     }
 
@@ -94,20 +299,24 @@ public class Computer {
         try (BufferedReader fileread = new BufferedReader(new FileReader("filework.txt"))) {
             String fstr, sstr = "";
             int count = 0;
-
-            System.out.println("\nСписок наявних файлів:");
+            System.out.println(" __________________________________________________________________________________________________");
+            System.out.println("|__________________________________________________________________________________________________|");
+            System.out.println("\n\n\t\t\t\tСписок наявних файлів:");
             while ((fstr = fileread.readLine()) != null) {
                 if (fstr.equals("{")) {
                     count++;
+                    System.out.println("\t ___");
+                    System.out.println("\t|   |");
+                    System.out.println("\t ---");
                     System.out.println("\t" + count + "." + sstr);
                 }
                 sstr = fstr;
             }
-            log("Список файлів прочитано, знайдено " + count + " файлів.");
         } catch (IOException e) {
             System.out.println("Помилка при читанні файлу: " + e.getMessage());
-            log("Помилка при читанні файлу: " + e.getMessage());
         }
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
     }
 
     public void fileReadContent(String nameoffile) {
@@ -122,7 +331,12 @@ public class Computer {
                     success++;
                 }
                 if (success == 3) {
-                    System.out.println("Вміст файлу: " + str);
+                    System.out.println(" __________________________________________________________________________________________________");
+                    System.out.println("|__________________________________________________________________________________________________|");
+                    System.out.println("\n\n\tФайл: "+nameoffile);
+                    System.out.println("\tВміст файлу: " + str);
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n __________________________________________________________________________________________________");
+                    System.out.println("|__________________________________________________________________________________________________|");
                     success++;
                 }
                 if (success == 2) {
@@ -131,40 +345,55 @@ public class Computer {
             }
             if (success != 4) {
                 System.out.println("Ви ввели ім'я неіснуючого файлу, спробуйте ще раз.");
-                log("Помилка: Файл не знайдено: " + nameoffile);
                 fileRead();
             }
         } catch (IOException e) {
             System.out.println("Помилка при читанні файлу: " + e.getMessage());
-            log("Помилка при читанні файлу: " + e.getMessage());
         }
     }
+}
 
-    // Геттери і сеттери
-    public String getBrand() {
-        return brand;
+class Processor {
+    protected String model;
+    protected double frequency;
+
+    public Processor(String model, double frequency) {
+        this.model = model;
+        this.frequency = frequency;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-        log("Бренд комп'ютера змінено на: " + brand);
+    @Override
+    public String toString() {
+        return model + " " + frequency + " GHz";
+    }
+}
+
+class Memory {
+    protected int capacity;
+    protected String type;
+
+    public Memory(int capacity, String type) {
+        this.capacity = capacity;
+        this.type = type;
     }
 
-    public int getYear() {
-        return year;
+    @Override
+    public String toString() {
+        return capacity + " GB " + type;
+    }
+}
+
+class Display {
+    protected String resolution;
+    protected int size;
+
+    public Display(String resolution, int size) {
+        this.resolution = resolution;
+        this.size = size;
     }
 
-    public void setYear(int year) {
-        this.year = year;
-        log("Рік випуску комп'ютера змінено на: " + year);
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-        log("Ціна комп'ютера змінено на: " + price);
+    @Override
+    public String toString() {
+        return size + " inch " + resolution;
     }
 }

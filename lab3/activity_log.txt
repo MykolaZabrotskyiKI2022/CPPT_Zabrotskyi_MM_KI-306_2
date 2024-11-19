@@ -1,0 +1,303 @@
+Computer created with default specifications.
+Start method called.
+Computer successfully started.
+showMenu method called.
+displayInfo method called.
+Computer specifications displayed.
+showMenu method called.
+Computer created with default specifications.
+Start method called.
+Computer successfully started.
+showMenu method called.
+displayInfo method called.
+Computer specifications displayed.
+showMenu method called.
+Computer created with default specifications.
+Start method called.
+Computer successfully started.
+showMenu method called.
+displayInfo method called.
+Computer specifications displayed.
+showMenu method called.
+changeInfo method called.
+Computer specifications updated.
+showMenu method called.
+displayInfo method called.
+Computer specifications displayed.
+showMenu method called.
+Calc method called with expression: 1952.1-52.1
+showMenu method called.
+showFileWorkMenu method called.
+fileCreate method called with file name: Computer lab
+showMenu method called.
+showFileWorkMenu method called.
+fileRead method called.
+fileReadContent method called with file name: 6 November.txt
+showMenu method called.
+shutdown method called.
+Computer successfully shut down.
+Computer created with default specifications.
+Start method called.
+Computer successfully started.
+showMenu method called.
+shutdown method called.
+Computer successfully shut down.
+Computer created with default specifications.
+Start method called.
+Computer successfully started.
+showMenu method called.
+Computer created with default specifications.
+Start method called.
+Computer successfully started.
+showMenu method called.
+displayInfo method called.
+Computer specifications displayed.
+showMenu method called.
+changeInfo method called.
+Computer specifications updated.
+showMenu method called.
+displayInfo method called.
+Computer specifications displayed.
+showMenu method called.
+Calc method called with expression: 123.9-1232.1
+showMenu method called.
+Computer created with default specifications.
+Start method called.
+Computer successfully started.
+showMenu method called.
+displayInfo method called.
+Computer specifications displayed.
+showMenu method called.
+changeInfo method called.
+Computer specifications updated.
+showMenu method called.
+displayInfo method called.
+Computer specifications displayed.
+showMenu method called.
+Computer created with default specifications.
+1731270587948: Створено ноутбук за замовчуванням.
+Computer created with default specifications.
+1731270900969: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731270930101: displayInfo method called.
+1731270930111: Computer specifications displayed.
+showMenu method called.
+Computer created with default specifications.
+1731341107957: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731341140630: displayInfo method called.
+1731341140641: Computer specifications displayed.
+showMenu method called.
+Computer created with default specifications.
+1731341180404: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731341197021: displayInfo method called.
+1731341197035: Computer specifications displayed.
+showMenu method called.
+Computer created with default specifications.
+1731341217979: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731341233583: displayInfo method called.
+1731341233594: Computer specifications displayed.
+showMenu method called.
+Computer created with default specifications.
+1731341528908: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731341548568: changeInfo method called.
+1731341548569: Computer specifications updated.
+showMenu method called.
+Computer created with default specifications.
+1731341822268: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731341857446: displayInfo method called.
+1731341857458: Computer specifications displayed.
+showMenu method called.
+showFileWorkMenu method called.
+Computer created with default specifications.
+1731341940285: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+showFileWorkMenu method called.
+fileCreate method called with file name: Lab3
+showMenu method called.
+Computer created with default specifications.
+1731342025602: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+showFileWorkMenu method called.
+fileCreate method called with file name: lab3 lab3 lab4
+showMenu method called.
+Computer created with default specifications.
+1731342368031: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731342387935: displayInfo method called.
+1731342387944: Computer specifications displayed.
+showMenu method called.
+1731342397958: displayInfo method called.
+1731342397960: Computer specifications displayed.
+showMenu method called.
+1731342407978: displayInfo method called.
+1731342407981: Computer specifications displayed.
+showMenu method called.
+1731342422999: changeInfo method called.
+1731342423001: Computer specifications updated.
+showMenu method called.
+1731342428012: displayInfo method called.
+1731342428014: Computer specifications displayed.
+showMenu method called.
+Calc method called with expression: 123-123
+showMenu method called.
+showFileWorkMenu method called.
+fileCreate method called with file name: lab wasdasda
+showMenu method called.
+showFileWorkMenu method called.
+fileRead method called.
+fileReadContent method called with file name: lab3 lab3 lab4.txt
+showMenu method called.
+Computer created with default specifications.
+1731346813982: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731346839614: Використано 25% батареї, залишок: 75.0%
+1731346839616: displayInfo method called.
+1731346839621: Computer specifications displayed.
+showMenu method called.
+1731346849634: Використано 25% батареї, залишок: 50.0%
+1731346854641: changeInfo method called.
+1731346854642: Computer specifications updated.
+showMenu method called.
+1731346859649: Використано 25% батареї, залишок: 25.0%
+1731346875360: displayInfo method called.
+1731346875362: Computer specifications displayed.
+showMenu method called.
+1731346885376: Використано 25% батареї, залишок: 0.0%
+1731346885380: Ноутбук розряджений, завершення роботи.
+Computer created with default specifications.
+1731346904114: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731346931790: Використано 25% батареї, залишок: 75.0%
+1731346931792: displayInfo method called.
+1731346931800: Computer specifications displayed.
+showMenu method called.
+1731346941812: Використано 25% батареї, залишок: 50.0%
+1731346946821: changeInfo method called.
+1731346946823: Computer specifications updated.
+showMenu method called.
+1731346951830: Використано 25% батареї, залишок: 25.0%
+1731346951835: Заряджено 25%, поточний заряд: 50.0%
+1731346951835: Заряджено 25%, поточний заряд: 75.0%
+1731346951836: Заряджено 25%, поточний заряд: 100.0%
+showMenu method called.
+1731346956843: Використано 25% батареї, залишок: 75.0%
+Computer created with default specifications.
+1731347114605: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731347140650: Використано 25% батареї, залишок: 75.0%
+1731347140653: displayInfo method called.
+1731347140660: Computer specifications displayed.
+showMenu method called.
+1731347150673: Використано 25% батареї, залишок: 50.0%
+1731347155682: changeInfo method called.
+1731347155684: Computer specifications updated.
+showMenu method called.
+1731347160687: Використано 25% батареї, залишок: 25.0%
+1731347160691: displayInfo method called.
+1731347160692: Computer specifications displayed.
+showMenu method called.
+1731347170709: Використано 25% батареї, залишок: 0.0%
+1731347170712: Ноутбук розряджений, завершення роботи.
+Computer created with default specifications.
+1731347188770: Створено ноутбук за замовчуванням.
+Computer created with default specifications.
+1731347236329: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731347263775: Використано 25% батареї, залишок: 90.0%
+1731347263778: displayInfo method called.
+1731347263785: Computer specifications displayed.
+showMenu method called.
+1731347273800: Використано 25% батареї, залишок: 80.0%
+1731347273805: displayInfo method called.
+1731347273806: Computer specifications displayed.
+showMenu method called.
+1731347283822: Використано 25% батареї, залишок: 70.0%
+1731347283825: displayInfo method called.
+1731347283826: Computer specifications displayed.
+showMenu method called.
+1731347293841: Використано 25% батареї, залишок: 60.0%
+1731347296857: Заряджено 25%, поточний заряд: 70.0%
+1731347301874: Заряджено 25%, поточний заряд: 80.0%
+1731347306890: Заряджено 25%, поточний заряд: 90.0%
+1731347311908: Заряджено 25%, поточний заряд: 100.0%
+showMenu method called.
+1731347323921: Використано 25% батареї, залишок: 90.0%
+Computer created with default specifications.
+1731416043041: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731416071555: Використано 25% батареї, залишок: 90.0%
+1731416071557: displayInfo method called.
+1731416071564: Computer specifications displayed.
+showMenu method called.
+1731416081578: Використано 25% батареї, залишок: 80.0%
+1731416084595: Заряджено 25%, поточний заряд: 90.0%
+1731416089612: Заряджено 25%, поточний заряд: 100.0%
+showMenu method called.
+1731416101630: Використано 25% батареї, залишок: 90.0%
+Computer created with default specifications.
+1731416188074: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1731416211416: Використано 25% батареї, залишок: 90.0%
+1731416223791: displayInfo method called.
+1731416223797: Computer specifications displayed.
+showMenu method called.
+1731416233811: Використано 25% батареї, залишок: 80.0%
+1731416251360: Заряджено 25%, поточний заряд: 90.0%
+1731416256377: Заряджено 25%, поточний заряд: 100.0%
+showMenu method called.
+1731416268391: Використано 25% батареї, залишок: 90.0%
+Computer created with default specifications.
+1732040532573: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1732040556825: Використано 25% батареї, залишок: 90.0%
+Computer created with default specifications.
+1732040945439: Створено ноутбук за замовчуванням.
+Start method called.
+Computer successfully started.
+showMenu method called.
+1732040965498: Використано 25% батареї, залишок: 90.0%
+1732040977259: changeInfo method called.
+1732040977261: Computer specifications updated.
+showMenu method called.
+1732040982268: Використано 25% батареї, залишок: 80.0%
+1732040982271: displayInfo method called.
+1732040982280: Computer specifications displayed.
+showMenu method called.
+1732040992295: Використано 25% батареї, залишок: 70.0%

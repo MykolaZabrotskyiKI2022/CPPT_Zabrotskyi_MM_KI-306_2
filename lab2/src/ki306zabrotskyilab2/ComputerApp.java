@@ -1,91 +1,166 @@
 package ki306zabrotskyilab2;
 
-import java.io.IOException;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Scanner;
+import javax.swing.JFrame;
 
 /**
- * Клас ComputerApp демонструє роботу з класом Computer, включаючи обчислення виразів,
- * створення та читання файлів.
+ * The ComputerApp class extends JFrame and implements KeyListener to create a GUI-based
+ * application that responds to key events to simulate various computer operations.
  */
-public class ComputerApp {
-    
-    public static void main(String[] args) throws IOException {
+public class ComputerApp extends JFrame implements KeyListener {
+
+    private char choice;
+    private int count;
+    private Computer computer;
+
+    /**
+     * Constructs a new ComputerApp and sets up the initial GUI and listeners.
+     */
+    public ComputerApp() {
+        this.setTitle("Клавіатура");
+        this.setSize(400, 200);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.addKeyListener(this);
+        this.setVisible(true);
+        this.choice = 0;
+        this.count = 0;
+        this.computer = new Computer();
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\t\t\tДля запуску комп'ютера натисніть на любу клавішу.\n\n\n\n\n\n\n\n\n\n\n\n");
+        System.out.println(" __________________________________________________________________________________________________");
+        System.out.println("|__________________________________________________________________________________________________|");
+    }
+
+    /**
+     * Method triggered when a key is typed.
+     * @param e KeyEvent triggered when a key is typed
+     */
+    @Override
+    public void keyTyped(KeyEvent e) {
+        // This method is called when a key is typed (pressed and released).
+    }
+
+    /**
+     * Method triggered when a key is pressed.
+     * @param e KeyEvent triggered when a key is pressed
+     */
+    @Override
+    public void keyPressed(KeyEvent e) {
+        // This method is called when a key is pressed.
+    }
+
+    /**
+     * Method triggered when a key is released. This method handles the main menu choices and
+     * initiates various operations based on the user's input.
+     * @param e KeyEvent triggered when a key is released
+     */
+    @Override
+    public void keyReleased(KeyEvent e) {
         Scanner scanner = new Scanner(System.in);
-        Computer myComputer = new Computer(); // Створення комп'ютера за замовчуванням
-        while (true) {
-            System.out.println("\nМеню:");
-            System.out.println("1. Встановити бренд, рік та ціну комп'ютера");
-            System.out.println("2. Показати інформацію про комп'ютер");
-            System.out.println("3. Виконати обчислення");
-            System.out.println("4. Створити файл");
-            System.out.println("5. Прочитати файл");
-            System.out.println("6. Вийти");
-
-            System.out.print("Оберіть дію: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // Очищення буфера
-
+        if (count == 1) {
+            choice = e.getKeyChar();
             switch (choice) {
-                case 1 -> {
-                    // Введення атрибутів комп'ютера
-                    System.out.print("\nВведіть бренд комп'ютера: ");
-                    String brand = scanner.nextLine();
-
-                    System.out.print("Введіть рік випуску комп'ютера: ");
-                    int year = scanner.nextInt();
-
-                    System.out.print("Введіть ціну комп'ютера: ");
-                    int price = scanner.nextInt();
-                    scanner.nextLine(); // Очищення буфера
-
-                    myComputer.setBrand(brand);
-                    myComputer.setYear(year);
-                    myComputer.setPrice(price);
+                case '1' -> {
+                    computer.displayInfo(); // Display computer information
                 }
-                case 2 -> {
-                    // Виведення інформації про комп'ютер
-                    System.out.println("\nІнформація про комп'ютер:");
-                    System.out.println("Бренд: " + myComputer.getBrand());
-                    System.out.println("Рік випуску: " + myComputer.getYear() + " року");
-                    System.out.println("Ціна: " + myComputer.getPrice() + " грн");
+                case '2' -> {
+                    System.out.println(" __________________________________________________________________________________________________");
+                    System.out.println("|__________________________________________________________________________________________________|\n\n\n\n\n\n\n\n");
+                    System.out.println("\t\t\t\tВвід інформації.");
+                    System.out.println("\tМодель процесора: ");
+                    String model = "AMD Ryzen";
+                    System.out.println("\tЧастота процесора: ");
+                    double frequency = 4.0;
+                    System.out.println("\tОб'єм ОП: ");
+                    int capacity = 32;
+                    System.out.println("\tТип ОП: ");
+                    String type = "DDR5";
+                    System.out.println("\tРозширення екрану: ");
+                    String resolution = "4K";
+                    System.out.println("\tРозмір екрану: ");
+                    System.out.println("\n\n\n\n\n\n\n\n\n __________________________________________________________________________________________________");
+                    System.out.println("|__________________________________________________________________________________________________|");
+                    int size = 27;
+                    Processor newProcessor = new Processor(model, frequency);
+                    Memory newMemory = new Memory(capacity, type);
+                    Display newDisplay = new Display(resolution, size);
+                    computer.changeInfo(newProcessor, newMemory, newDisplay); // Change computer components
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException p) {
+                        System.err.println("Помилка: потік перервано.");
+                    }
                 }
-                case 3 -> {
-                    // Обчислення арифметичного виразу
-                    System.out.println("\nКалькулятор.");
-                    System.out.print("\tВведіть вираз: ");
+                case '3' -> {
+                    System.out.println(" __________________________________________________________________________________________________");
+                    System.out.println("|__________________________________________________________________________________________________|\n\n\n\n\n\n\n\n");
+                    System.out.println("\t\t\t\t\tКалькулятор.");
+                    System.out.print("\t\tВведіть вираз для обчисленн: ");
                     String expression = scanner.nextLine();
-                    myComputer.calculate(expression);
+                    computer.Calc(expression); // Perform calculation
+                    System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n __________________________________________________________________________________________________");
+                    System.out.println("|__________________________________________________________________________________________________|");
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException p) {
+                        System.err.println("Помилка: потік перервано.");
+                    }
                 }
-                case 4 ->{
-                    // Створення файлу
-                    System.out.print("\nВведіть ім'я файлу: ");
-                    String nameoffile = scanner.nextLine();
-        
-                    System.out.print("Введіть вміст файлу: ");
-                    String contentoffile = scanner.nextLine();
-
-                    myComputer.fileCreate(nameoffile, contentoffile);
+                case '4' -> {
+                    computer.showFileWorkMenu(); // Show file work menu
+                    int fwchoice = scanner.nextInt();
+                    scanner.nextLine();
+                    if (fwchoice == 1) {
+                        System.out.println(" __________________________________________________________________________________________________");
+                        System.out.println("|__________________________________________________________________________________________________|\n\n\n\n\n\n\n\n");
+                        System.out.println("\t\t\t\t\tСтворення файлу.");
+                        System.out.print("\t\t\tВведіть ім'я файлу: ");
+                        String nameoffile = scanner.nextLine();
+                        System.out.print("\t\t\tВведіть вміст файлу: ");
+                        String contentoffile = scanner.nextLine();
+                        computer.fileCreate(nameoffile, contentoffile); // Create a file
+                    } else if (fwchoice == 2) {
+                        computer.fileRead(); // Read the list of files
+                        System.out.print("Введіть назву файлу, вміст якого ви хочете прочитати: ");
+                        try {
+                            Thread.sleep(5000);
+                        } catch (InterruptedException p) {
+                            System.err.println("Помилка: потік перервано.");
+                        }
+                        String nameoffile = scanner.nextLine();
+                        nameoffile = nameoffile + ".txt";
+                        computer.fileReadContent(nameoffile); // Read content of the specified file
+                        try {
+                            Thread.sleep(5000);
+                        } catch (InterruptedException p) {
+                            System.err.println("Помилка: потік перервано.");
+                        }
+                    }
                 }
-                case 5 -> {
-                    // Читання файлу
-                    myComputer.fileRead();
-
-                    System.out.print("Введіть назву файлу, вміст якого ви хочете прочитати: ");
-                    String nameoffile;
-                    nameoffile = scanner.nextLine();
-                    nameoffile = nameoffile + ".txt";
-
-                    myComputer.fileReadContent(nameoffile);
-                }
-                case 6 -> {
-                    // Вихід з програми
-                    System.out.println("Вихід...");
+                case '5' -> {
+                    computer.shutdown(); // Shut down the computer
                     scanner.close();
-                    return;
+                    System.exit(0);
                 }
-                default -> System.out.println("Невірний вибір, спробуйте ще раз.");
+                default -> {
+                    // Do nothing if the input is not recognized
+                }
             }
+        } else if (count == 0) {
+            computer.start(); // Start the computer on first key press
+            count++;
         }
+        computer.showMenu(); // Show the main menu after each action
+    }
+
+    /**
+     * The main method to run the ComputerApp.
+     * @param args command line arguments (not used)
+     */
+    public static void main(String[] args) {
+        new ComputerApp(); // Create and run the ComputerApp
     }
 }
-

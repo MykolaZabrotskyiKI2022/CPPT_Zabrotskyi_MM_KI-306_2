@@ -1,0 +1,24 @@
+Lab2 Variant7.txt
+{
+lllab2 sadasdsad
+}
+6 November.txt
+{
+12 a.m
+}
+Computer lab.txt
+{
+coomp comp comp
+}
+Lab3.txt
+{
+lab 3 lab 3
+}
+lab3 lab3 lab4.txt
+{
+asdas d asd
+}
+lab wasdasda.txt
+{
+wasda dfdsafda
+}
